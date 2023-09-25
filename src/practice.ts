@@ -1,7 +1,7 @@
-function wrap<T>(param: T) {
-	return {
-		param
-	};
+interface Items<T> {
+	list: T[];
 }
 
-const wrapped = wrap(10);
+const items: Items<string> = {
+	list: ["a", "b", "c"]
+};
