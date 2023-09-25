@@ -2,9 +2,7 @@ interface Person {
 	name: string;
 	age?: number;
 }
-interface Developer {
-	name: string;
-	age?: number;
+interface Developer extends Person {
 	skills: string[];
 }
 
@@ -17,3 +15,5 @@ const expert: Developer = {
 	name: "박천재",
 	skills: ['typescript', 'react']
 };
+
+const people: Person[] = [person, expert];

@@ -7,3 +7,4 @@ var expert = {
     name: "박천재",
     skills: ['typescript', 'react']
 };
+var people = [person, expert];
