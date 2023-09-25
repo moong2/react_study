@@ -5,11 +5,11 @@ type GreetingProps = {
 	mark: string;
 };
 
-const Greetings: React.FC<GreetingProps> = ({name, mark}) => (
+const Greetings = ({name, mark}: GreetingProps) => (
 	<div>
 		Hello, {name} {mark}
 	</div>
-);
+)
 
 Greetings.defaultProps = {
 	mark: '!'
