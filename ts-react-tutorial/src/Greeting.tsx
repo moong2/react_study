@@ -1,11 +1,18 @@
 import React from 'react';
 
-type GreetingsProps = {
+type GreetingProps = {
 	name: string;
+	mark: string;
 };
 
-const Greetings: React.FC<GreetingsProps> = ({name}) => (
-	<div>Hello, {name}</div>
+const Greetings: React.FC<GreetingProps> = ({name, mark}) => (
+	<div>
+		Hello, {name} {mark}
+	</div>
 );
+
+Greetings.defaultProps = {
+	mark: '!'
+};
 
 export default Greetings;
