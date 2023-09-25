@@ -1,24 +1,8 @@
-type Person = {
-	name: string;
-	age?: number;
-};
+function merge<A, B>(a: A, b: B): A & B {
+	return {
+		...a,
+		...b
+	};
+}
 
-type Developer = Person & {
-	skills: string[];
-};
-
-const person: Person = {
-	name: "박성하"
-};
-
-const expert: Developer = {
-	name: "박천재",
-	skills: ["typescript", "react"]
-};
-
-type People = Person[];
-const people: People = [person, expert];
-
-type Color = "red" | "orange" | "yellow";
-const color: Color = "red";
-const colors: Color[] = ["red", "orange"];
+const merged = merge({foo: 1}, {bar: 1});
